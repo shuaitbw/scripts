@@ -266,7 +266,7 @@ async function zoo() {
         }
       }
     }
-    if (new Date().getHours() >= 14 && new Date().getHours() <= 17 && !$.hotFlag){//30个店铺，为了避免代码执行太久，下午2点到5点才做店铺任务
+    if (new Date().getHours() >= 22 && new Date().getHours() <= 23 && !$.hotFlag){//30个店铺，为了避免代码执行太久，下午22点到23点才做店铺任务
       console.log(`去做店铺任务`);
       $.shopInfoList = [];
       await takePostRequest('qryCompositeMaterials');
