@@ -233,6 +233,7 @@ function getApi(url, ac) {
         if (err) {
           $.logErr(`❌ 账号${ac.no} API请求失败，请检查网络后重试\n url: ${opts.url} \n data: ${JSON.stringify(err, null, 2)}\n`)
         } else {
+          $.log(opts.url, data)
           obj = $.toObj(data, obj)
         }
       } catch (e) {
